@@ -1,0 +1,73 @@
+/* Start General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+.whiteSpacing {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.blueButton {
+    display: inline-block;
+    width: 135px;
+    padding: 13px 20px;
+    border-radius: 6px;
+    background-color: #025595;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    color: #F5F5F5;
+}
+
+/* End General */
+
+/* Start Nav */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    width: 100vw;
+    position: fixed;
+    background-color: #EFF8FF;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    list-style: none;
+    font-weight: 500;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.hamburgerIcon {
+    display: none;
+}
+
+/* End Nav */
+
+
+@media screen and (max-width: 992px) {
+
+    .hamburgerIcon {
+        display: inline;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav .blueButton {
+        display: none;
+    }
+}
