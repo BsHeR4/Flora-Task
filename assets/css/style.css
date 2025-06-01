@@ -6,6 +6,29 @@
     font-family: "Inter", sans-serif;
 }
 
+:root {
+
+    /* Start Web Colors */
+
+    --primary-color: #EFF8FF;
+    --secondary-color: #025595;
+
+    /* End Web Colors */
+
+    /* Start Web Font Colors */
+
+    --primary-font-color: #222222;
+    --secondary-font-color: #22222280;
+
+    /* End Web Font Colors */
+
+    /* --section-header-font-size: 39px;
+    --section-caption-font-size: 39px; */
+
+
+
+}
+
 .whiteSpacing {
     padding-left: 70px;
     padding-right: 70px;
@@ -16,7 +39,7 @@
     width: 135px;
     padding: 13px 20px;
     border-radius: 6px;
-    background-color: #025595;
+    background-color: var(--secondary-color);
     text-decoration: none;
     font-size: 14px;
     text-align: center;
@@ -34,7 +57,7 @@ nav {
     height: 90px;
     width: 100vw;
     position: fixed;
-    background-color: #EFF8FF;
+    background-color: var(--primary-color);
 }
 
 nav ul {
@@ -47,7 +70,7 @@ nav ul {
 
 nav ul a {
     text-decoration: none;
-    color: #222222;
+    color: var(--primary-font-color);
 }
 
 .hamburgerIcon {
@@ -57,7 +80,87 @@ nav ul a {
 /* End Nav */
 
 
+/* Start Hero */
+
+.hero {
+    height: 100vh;
+    padding-top: 90px;
+    background-image: url('./../imgs/houseBackground.png');
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-color: var(--primary-color);
+}
+
+.hero h1 {
+    max-width: 549px;
+    padding-top: 32px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 80px;
+    color: var(--primary-font-color);
+}
+
+.heroCaption {
+    max-width: 423px;
+    color: var(--secondary-font-color);
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.hero .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 866px;
+    padding: 20px 58px;
+    border-radius: 16px;
+    background-color: #ffffffcc;
+    backdrop-filter: blur(5px);
+
+}
+
+.hero .item {
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero .item .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    background-color: #0255950f;
+    border-radius: 50%;
+}
+
+.item h2 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.22px;
+    vertical-align: middle;
+
+}
+
+.item p {
+    color: var(--secondary-font-color);
+}
+
+/* End Hero */
+
+
 @media screen and (max-width: 992px) {
+
+
+    .whiteSpacing {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Start Nav */
 
     .hamburgerIcon {
         display: inline;
@@ -70,4 +173,40 @@ nav ul a {
     nav .blueButton {
         display: none;
     }
+
+    /* End Nav */
+
+    /* Start Hero */
+
+    .hero {
+        padding: 0;
+        padding-top: 139px;
+    }
+
+    .hero h1 {
+        max-width: 320px;
+        padding: 0 20px;
+        font-size: 35px;
+        line-height: 46px;
+    }
+    
+    .heroCaption {
+        padding: 20px 20px 35px 20px;
+        font-size: 14px;
+    }
+
+    .hero .container {
+        max-width: 100vw;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        padding: 20px 39px;
+        border-radius: 0px;
+    }
+
+    .item p{
+        font-size: 15px;
+    }
+
+    /* End Hero */
 }
