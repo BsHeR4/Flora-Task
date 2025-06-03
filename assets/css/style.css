@@ -1,11 +1,3 @@
-/* Start General */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
-}
-
 :root {
 
     /* Start Web Colors */
@@ -27,6 +19,14 @@
 
 
 
+}
+
+/* Start General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
 }
 
 .whiteSpacing {
@@ -62,7 +62,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: 90px;
-    width: 100vw;
+    width: 100%;
     position: fixed;
     z-index: 3;
     background-color: var(--primary-color);
@@ -92,11 +92,21 @@ nav ul a {
 
 .hero {
     height: 100vh;
+    padding-bottom: 94px;
     padding-top: 90px;
-    background-image: url('./../imgs/houseBackground.png');
-    background-repeat: no-repeat;
-    background-position: 100% 100%;
     background-color: var(--primary-color);
+    position: relative;
+    z-index: 1;
+
+    >img {
+        max-width: 835px;
+        min-width: 595px;
+        width: 61.1273vw;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -3;
+    }
 }
 
 .hero h1 {
@@ -123,7 +133,6 @@ nav ul a {
     border-radius: 16px;
     background-color: #ffffffcc;
     backdrop-filter: blur(5px);
-
 }
 
 .hero .item {
@@ -144,7 +153,7 @@ nav ul a {
     border-radius: 50%;
 }
 
-.item h2 {
+.hero .item h2 {
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
@@ -153,7 +162,7 @@ nav ul a {
 
 }
 
-.item p {
+.hero .item p {
     padding-top: 10px;
     color: var(--secondary-font-color);
 }
@@ -164,7 +173,6 @@ nav ul a {
 /* Start How It Works Section */
 
 .HowItWorks {
-    padding-top: 94px;
     padding-bottom: 94px;
 }
 
@@ -335,6 +343,143 @@ nav ul a {
 
 /* End Find Dream Home  */
 
+/* Start Best Real Estate Deals */
+
+.bestRealEstateDeals {
+
+    padding-bottom: 94px;
+
+    >p {
+        font-size: 15px;
+        padding-top: 10px;
+    }
+
+    .menu {
+        display: flex;
+        align-items: flex-start;
+        padding-top: 56px;
+        padding-bottom: 41px;
+        gap: 46px;
+        padding: 56px 70px 41px 70px;
+
+        .item {
+            cursor: pointer;
+        }
+
+        .item::after {
+            content: '';
+            display: block;
+            width: 0%;
+            padding-top: 15px;
+            border-bottom: 3px solid #025595;
+            transition: ease-in;
+            transition-timing-function: ease-in;
+            transition-duration: 0.3s;
+        }
+
+        .item:hover::after {
+            width: 100%;
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+
+        .card {
+            position: relative;
+            max-width: 387.8013px;
+
+            .transperantButton {
+                padding: 6px;
+                background-color: #22222245;
+                position: absolute;
+                left: 14px;
+                top: 14px;
+                border-radius: 5px;
+                border: 1px solid #fff;
+                color: #fff;
+            }
+
+            .buttonsMargin {
+                margin-left: 86px;
+            }
+        }
+    }
+}
+
+/* End Best Real Estate Deals */
+
+
+/* Start Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 35px;
+        padding-bottom: 35px;
+        /* border-bottom: 1px solid */
+
+        .footerLogo {
+            padding-bottom: 26px;
+        }
+
+        .footerParagraph {
+            max-width: 350.5929px;
+            color: var(--secondary-font-color);
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .item h2 {
+            font-weight: 700;
+            font-size: 20px;
+            padding-bottom: 4px;
+        }
+
+        .socialMedia {
+            display: flex;
+            gap: 16px;
+
+            .icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 48px;
+                width: 48px;
+                border-radius: 50%;
+                background-color: var(--secondary-color);
+            }
+        }
+    }
+
+    .copyright {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        border-top: 1px solid #2222221A;
+        font-size: 14px;
+
+
+        div {
+            display: flex;
+            gap: 30px;
+        }
+    }
+}
+
+/* End Footer */
+
 @media screen and (max-width: 992px) {
 
 
@@ -364,6 +509,10 @@ nav ul a {
     .hero {
         padding: 0;
         padding-top: 139px;
+
+        >img {
+            min-width: 300px;
+        }
     }
 
     .hero h1 {
@@ -387,7 +536,7 @@ nav ul a {
         border-radius: 0px;
     }
 
-    .item p {
+    .hero .item p {
         padding-top: 6px;
         font-size: 15px;
     }
@@ -470,4 +619,50 @@ nav ul a {
     }
 
     /* End Most Trending Section */
+
+
+    /* Start Best Real Estate Deals */
+    .bestRealEstateDeals {
+        .menu {
+            overflow: hidden;
+
+            p {
+                width: 158px;
+            }
+        }
+
+        .container {
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: center;
+
+            .card {
+
+                img {
+                    width: 88.8888vw;
+                    max-width: 320px;
+                }
+            }
+        }
+    }
+
+    /* End Best Real Estate Deals */
+
+    /* Start Footer  */
+    footer {
+
+        .container {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 32px;
+        }
+
+        .copyright {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+        }
+    }
+
+    /* End Footer  */
 }
