@@ -204,11 +204,15 @@ nav ul a {
 
 .HowItWorks .container {
     padding-top: 56px;
+    gap: 20px;
 
     .card {
         padding: 30px 40px 80px 40px;
         max-width: 380px;
         border-radius: 15px;
+        border: 1.5px solid #FFFFFF26;
+        box-shadow: 0px 0px 10px 0px #0000001A;
+
 
         img {
             padding-bottom: 20px;
@@ -216,6 +220,11 @@ nav ul a {
 
         h3 {
             padding-bottom: 10px;
+        }
+
+        p {
+            font-size: 14px;
+            color: var(--secondary-font-color);
         }
     }
 
@@ -547,12 +556,22 @@ footer {
     .HowItWorks {
         padding-top: 64px;
         padding-bottom: 64px;
+
     }
 
     .HowItWorks .container {
         flex-direction: column;
         align-items: center;
         gap: 20px;
+
+        .card {
+            padding: 15px 18px 34px 18px;
+            min-height: 218px;
+            h3 {
+                font-weight: 600;
+                font-size: 22px;
+            }
+        }
     }
 
     /* End How It Works Section */
@@ -597,7 +616,7 @@ footer {
 
             .card {
                 padding: 16px;
-                max-width: 320px;
+                max-width: max-content;
 
                 h3 {
                     font-size: 16px;
@@ -608,7 +627,7 @@ footer {
                 }
 
                 >img {
-                    max-width: 288px;
+                    max-width: max-content;
                     width: 100%;
                 }
             }
@@ -622,13 +641,12 @@ footer {
     /* Start Best Real Estate Deals */
     .bestRealEstateDeals {
         padding-bottom: 64px;
-
+        overflow: hidden;
         .menu {
+            width: max-content;
             overflow: hidden;
-
-            p {
-                width: 158px;
-            }
+            padding: 42px 20px 40px 20px;
+            gap: 30px;
         }
 
         .container {
@@ -671,4 +689,19 @@ footer {
     }
 
     /* End Footer  */
+}
+
+@media screen and (min-width: 768px) {
+
+    /* Start Most Trending Section */
+
+    .mostTrending .container {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        
+    }
+
+    /* End Most Trending Section */
 }
