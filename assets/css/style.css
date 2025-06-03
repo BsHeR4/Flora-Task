@@ -656,6 +656,11 @@ footer {
             flex-direction: column;
             align-items: flex-start;
             gap: 32px;
+
+            a {
+                text-decoration: none;
+                color: #222222;
+            }
         }
 
         .copyright {
